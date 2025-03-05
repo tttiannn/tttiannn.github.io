@@ -1,0 +1,93 @@
+<html lang="zh-CN"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content="简单记录，加以勉励"/><meta name="keyword"/><title>ros_1
+-
+Eassay Of tttiannn
+-
+
+汀花雨细，水树风闲。</title><link rel="icon" href="/img/favicon.ico"/>
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/helpers.css">
+
+<script src="/js/clipboard/clipboard.min.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+<script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="loading-wrapper" data-loading="data-loading"><div class="loading"><span></span><span></span><span></span></div></div><div class="page" data-filter="data-filter"><div class="head" data-show="data-show"><header class="head-header"><div class="head-author"><a class="head-author-link" href="/">Eassay Of tttiannn</a></div><div class="head-right"><button class="bar-wrap" id="bar-wrap-toggle" title="menu button"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button><div class="head-item"><a class="search-button head-item-link"><span>Search</span>
+<i class="icon icon-search"></i></a></div><div class="head-item"><a class="head-item-link" href="/about">关于</a></div></div></header>
+<div class="menubar-head" id="menubar"><ul class="menubar-ul"><li class="menubar-item"><i class="icon icon-chevron-right"></i>
+<a class="menubar-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="menubar-item"><i class="icon icon-chevron-right"></i>
+<a class="menubar-link" href="/categories/%E9%98%85%E8%AF%BB/">阅读</a></li><li class="menubar-item" data-border="data-border"></li><li class="menubar-item"><i class="icon icon-archive"></i>
+<a class="menubar-link" href="/archives">Archives</a></li><li class="menubar-item"><i class="icon icon-tags"></i>
+<a class="menubar-link" href="/tags">Tags</a></li><li class="menubar-item" data-border="data-border"></li><li class="menubar-item"><a class="menubar-link" href="/about"><span>关于</span></a></li></ul><div class="menu-search-box search-button"><div>Search</div>
+<i class="icon icon-search"></i></div></div></div><div class="main" data-page="post"><article class="post" id="post"><header class="post-head"><h1 class="post-title"><a class="title" href="/2025/02/11/ros-1/">ros_1</a></h1></header><div class="post-meta"><div class="post-date"><time class="post-time" itemprop="datePublished" title="2025-02-11 20:15:48" datetime="2025-02-11T12:15:48.000Z">2025-02-11</time></div>|
+<div class="post-tag"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ros/" rel="tag">ros</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">机器人</a></li></ul></div>
+<div class="post-visit"><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span>hits</span></div></div><div class="post-info"><div class="post-word-count">This article contains 601 words.</div>
+<div class="post-cc">Copyright: 署名-非商业性使用-相同方式共享
+
+|
+<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/">CC BY-NC-SA 2.5 CN</a></div></div><div class="article-entry" itemprop="articleBody"><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p>官网安装比较复杂，并且很容易中间出现奇怪的未知错误。</p>
+<p>此次安装的是noetic版本，具体也没有细说版本区别，只是找到了一个可以用的。</p>
+<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><p>具体报错没有截图留存，但比较好解决，大多都是缺少什么配置，按照提示、搜索或者ai都能很好解决。</p>
+<h2 id="一键安装"><a href="#一键安装" class="headerlink" title="一键安装"></a>一键安装</h2><p>据学姐所说，官网只是让感受一下，他们后面使用全是一键安装，但我没有尝试。<br>[鱼香]: <a target="_blank" rel="noopener" href="https://fishros.org.cn/forum/topic/20/%E5%B0%8F%E9%B1%BC%E7%9A%84%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97">https://fishros.org.cn/forum/topic/20/%E5%B0%8F%E9%B1%BC%E7%9A%84%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97</a></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>其实我至今仍未确定我的ubuntu到底出没出问题，毕竟一个安装好的ros，为什么会因为修复了一个问题，而缺少一个包。但我也不想再细究问题，修好ros后我不想再去尝试那个命令了。</p>
+<p>乌龟测试是自带的经典样例，后面教程的入门也是在这个节点上做事。</p>
+<p>基本就是三个命令：</p>
+<pre><code>1. `roscore`
+1. `rosrun turtlesim turtlesim_node`
+1. `rosrun turtlesim turtle_teleop_key`
+</code></pre>
+<p>需要开三个终端是比较奇怪的，最开始也不是很理解为什么。后面了解ros一些工作原理，知道了为什么需要一直运行。</p>
+<h1 id="入门学习"><a href="#入门学习" class="headerlink" title="入门学习"></a>入门学习</h1><p>所有学习都基于小乌龟测试的那个教程，教程目前来看，给的示例比较详细，也很好上手操作，实操来问题不会太多。但我个人觉得，在示例中，一些步骤缺乏讲解，单纯摆在那里，我复制粘贴可以做到，但我不能独立写出这段代码。</p>
+<p>教程十分详细，此处就不洋洋洒洒再记述一遍了，我随意列出一些自己想记录的。</p>
+<h2 id="基本框架"><a href="#基本框架" class="headerlink" title="基本框架"></a>基本框架</h2><p>虽然教程把hello体验放在了前面，但按学长的顺序以及我学完后个人感受，个人认为ros的架构是最开始需要了解的，不然一切操作只是盲目的按图索骥。虽然学完这些后还是相当迷茫，不知道自己在干嘛，但对于自己的操作也能感受到一些，逐步理解。</p>
+<p><img src="/2025/02/11/ros-1/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.jpg" alt="文件系统"></p>
+<p>这张图片很清晰，从教程里截取的。</p>
+<h2 id="一些操作"><a href="#一些操作" class="headerlink" title="一些操作"></a>一些操作</h2><p><code>roscore</code></p>
+<p><code>rosrun</code></p>
+<h3 id="comments">Comments</h3><div id="gitalk-comments"></div><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"/><script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script><script>window.gitalk = new Gitalk({
+  clientID: 'Ov23lirLCtDatIddvdca',
+  clientSecret: '5b69f4edb66a63f0479bd620de1a5eaf28336369',
+  repo: 'tttiannn.github.io',
+  owner: 'tttiannn',
+  admin: 'tttiannn'.split(','),
+  distractionFreeMode: false  // Facebook-like distraction free mode
+});
+window.gitalk.render('gitalk-comments'); // Render Gitalk in the element with ID 'gitalk-container'</script></div></article><aside class="post-widget"><h4>In this article</h4><nav class="post-toc-wrap" id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%98%E7%BD%91"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">官网</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">一些问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">一键安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">测试</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0"><span class="post-toc-number">2.</span> <span class="post-toc-text">入门学习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">基本框架</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E4%BA%9B%E6%93%8D%E4%BD%9C"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">一些操作</span></a></li></ol></li></ol></nav></aside></div><footer class="footer-nav"><div class="footer"><div class="back-top" id="back-top" title="Back to top"><i class="icon icon-chevron-bar-up"></i></div><div class="footer-content"><div><span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv">?</span>
+PV
+</span><span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv">?</span>
+UV</span></div>
+
+Copyright &copy;
+2024<span class="time-divide">-</span>2025
+tian.
+
+Power by
+<a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+and
+<a href="https://github.com/Cerallin/hexo-theme-yuzu" target="_blank" rel="external nofollow" title="v3.2.5">Theme Yuzu</a>.</div></div></footer>
+<script>window.config = {
+  url_root: '/',
+  meta_path: 'meta.json',
+};
+</script>
+<script src="/js/theme/back-to-top.js"></script>
+
+
+<script src="/js/theme/clipboard.js"></script>
+
+
+<script src="/js/theme/loading.js"></script>
+
+
+<script src="/js/theme/navbar.js"></script>
+
+<script src="/js/theme/search.js"></script>
+
+<script src="/js/theme/toc.js"></script>
+<script>window.onload = function () {
+  for (const moduleName in Theme) {
+    const module = Theme[moduleName];
+    module.register();
+  }
+};</script></div><div class="search-modal" id="search-modal"><div class="card"><div class="card-head"><div class="search-box"><input class="search-input" id="search-input" placeholder="search"/><div class="search-button" id="search-button"><div class="icon icon-search"></div></div></div><div class="close-button"><div class="icon icon-x"></div></div></div><div class="card-body"><div class="search-count">search.total<span id="search-count-num">0</span>search result(s) in total.</div><div class="search-result" id="search-result"></div></div></div></div></body></html>
