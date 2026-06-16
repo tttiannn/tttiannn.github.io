@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>personal page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="day">
+  <div id="scroll-particles" aria-hidden="true"></div>
+
+  <button id="theme-toggle" class="pixel-button" type="button" aria-label="切换日夜模式">
+    <svg class="theme-icon theme-sun" viewBox="0 0 64 64" aria-hidden="true">
+      <rect x="26" y="4" width="12" height="10" fill="#fbd000"/>
+      <rect x="26" y="50" width="12" height="10" fill="#fbd000"/>
+      <rect x="4" y="26" width="10" height="12" fill="#fbd000"/>
+      <rect x="50" y="26" width="10" height="12" fill="#fbd000"/>
+      <rect x="12" y="12" width="8" height="8" fill="#fbd000"/>
+      <rect x="44" y="12" width="8" height="8" fill="#fbd000"/>
+      <rect x="12" y="44" width="8" height="8" fill="#fbd000"/>
+      <rect x="44" y="44" width="8" height="8" fill="#fbd000"/>
+      <rect x="18" y="18" width="28" height="28" fill="#fbd000"/>
+      <rect x="22" y="22" width="20" height="20" fill="#ffe169"/>
+      <rect x="26" y="26" width="12" height="12" fill="#fff3a0"/>
+    </svg>
+    <svg class="theme-icon theme-moon" viewBox="0 0 64 64" aria-hidden="true">
+      <rect x="18" y="12" width="26" height="8" fill="#dce7ff"/>
+      <rect x="12" y="20" width="34" height="8" fill="#dce7ff"/>
+      <rect x="10" y="28" width="34" height="8" fill="#dce7ff"/>
+      <rect x="12" y="36" width="30" height="8" fill="#dce7ff"/>
+      <rect x="18" y="44" width="20" height="8" fill="#dce7ff"/>
+      <rect x="34" y="16" width="12" height="8" fill="#162347"/>
+      <rect x="38" y="24" width="10" height="8" fill="#162347"/>
+      <rect x="36" y="32" width="12" height="8" fill="#162347"/>
+      <rect x="32" y="40" width="10" height="8" fill="#162347"/>
+      <rect x="48" y="10" width="6" height="6" fill="#e0e058"/>
+      <rect x="52" y="18" width="4" height="4" fill="#e0e058"/>
+      <rect x="46" y="24" width="4" height="4" fill="#e0e058"/>
+      <rect x="8" y="10" width="4" height="4" fill="#e0e058"/>
+      <rect x="14" y="6" width="4" height="4" fill="#e0e058"/>
+    </svg>
+  </button>
+
+  <button id="companion-day" class="companion-trigger" type="button" aria-label="打开白天小游戏">
+    <span class="companion-shadow"></span>
+    <span class="companion-art" aria-hidden="true">
+      <img src="figures/dragon.png" alt="">
+    </span>
+  </button>
+
+  <button id="companion-night" class="companion-trigger" type="button" aria-label="打开夜晚小游戏">
+    <span class="companion-shadow"></span>
+    <span class="companion-art" aria-hidden="true">
+      <img src="figures/wolf.png" alt="">
+    </span>
+  </button>
+
+  <main>
+    <section id="intro" class="pixel-panel">
+      <h2 class="section-title">自我介绍区</h2>
+      <div class="panel-inner">
+        <div id="avatar-frame">
+          <img id="avatar" src="figures/avatar.jpg" alt="像素角色头像占位">
+        </div>
+        <div class="intro-copy">
+          <h1 id="nickname"> 赵天俊</h1>
+          <div class="name-banner">PLAYER STATUS</div>
+          <p id="major">24级智能感知工程</p>
+          <div id="bio">
+            <p>右上角的太阳/月亮可以点点看</p>
+            <p>耀西和布鲁斯很可爱，摸摸他们呀</p>
+            <p>一些个人的无病呻吟也可以在底下点进去看看</p>
+            <p>喜欢游戏，但不沉迷也会看书，但不宅家也会旅游的学生一枚</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="data-viz" class="pixel-panel">
+      <h2 class="section-title">数据可视化区</h2>
+      <div class="data-grid">
+        <div class="sub-panel">
+          <div id="chart-title" class="chart-header">🏃 30天冒险步数</div>
+          <div id="steps-chart"></div>
+        </div>
+        <div class="sub-panel">
+          <div class="chart-header">🖼️ 照片墙收藏册</div>
+          <div id="photo-wall"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="essays" class="pixel-panel">
+      <h2 class="section-title">随笔区</h2>
+      <div class="essay-layout">
+        <div class="essay-list-panel">
+          <div class="chart-header">📝 像素随笔集</div>
+          <div id="essay-list" class="essay-list">
+            <div class="essay-empty">正在读取随笔文件...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-panel pixel-panel" id="page-footer">【像素冒险仍在继续】</footer>
+
+  <div id="game-overlay" aria-hidden="true">
+    <div class="overlay-frame">
+      <button id="close-game" class="pixel-button" type="button">关闭游戏</button>
+      <canvas id="game-canvas" width="800" height="400"></canvas>
+    </div>
+  </div>
+
+  <div id="essay-overlay" aria-hidden="true">
+    <div class="essay-overlay-frame pixel-panel">
+      <button id="close-essay" class="pixel-button" type="button">关闭文章</button>
+      <div class="chart-header">📖 文章内容</div>
+      <article id="essay-viewer" class="essay-viewer">
+        <div class="essay-empty">点击左侧任意随笔查看全文。</div>
+      </article>
+    </div>
+  </div>
+
+  <div id="photo-overlay" aria-hidden="true">
+    <div class="photo-overlay-frame pixel-panel">
+      <div class="photo-overlay-topbar">
+        <div class="chart-header">🖼️ 照片查看</div>
+        <button id="close-photo" class="pixel-button" type="button">关闭图片</button>
+      </div>
+      <img id="photo-overlay-image" src="" alt="放大查看的照片">
+    </div>
+  </div>
+
+  <script src="essays/essays-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
