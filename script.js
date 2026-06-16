@@ -108,6 +108,10 @@ function getBundledEssays() {
   return [];
 }
 
+function findBundledEssay(fileName) {
+  return getBundledEssays().find((entry) => entry.file === fileName) || null;
+}
+
 function renderStepsChart() {
   const maxSteps = Math.max(...stepsData.map((item) => item.steps));
   const wrapper = document.createElement("div");
@@ -308,12 +312,21 @@ async function showEssay(entry, button) {
     let markdown = entry.content;
 
     if (!markdown) {
-      const response = await fetch(`essays/${entry.file}`);
-      if (!response.ok) {
-        throw new Error("文章文件读取失败");
-      }
+      try {
+        const response = await fetch(`essays/${entry.file}`);
+        if (!response.ok) {
+          throw new Error("文章文件读取失败");
+        }
 
-      markdown = await response.text();
+        markdown = await response.text();
+      } catch (fetchError) {
+        const bundledEssay = findBundledEssay(entry.file);
+        if (bundledEssay && bundledEssay.content) {
+          markdown = bundledEssay.content;
+        } else {
+          throw fetchError;
+        }
+      }
     }
     essayViewer.innerHTML = markdownToHtml(markdown);
     openEssayOverlay();
